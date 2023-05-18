@@ -3,6 +3,8 @@ import { type RouteProps } from 'react-router-dom';
 import { MainPage } from '@/pages/MainPage';
 import { AboutPage } from '@/pages/AboutPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
+import { HistoryPage } from '@/pages/HistoryPage';
+import { TeamPage } from '@/pages/TeamPage';
 
 export type AppRoutesProps = RouteProps & {
   authOnly?: boolean;
@@ -10,7 +12,6 @@ export type AppRoutesProps = RouteProps & {
 
 export enum AppRoutes {
   MAIN = 'main',
-  ABOUT = 'about',
   HISTORY = 'history',
   TEAM = 'team',
   // Must be last
@@ -19,7 +20,6 @@ export enum AppRoutes {
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
-  [AppRoutes.ABOUT]: '/about',
   [AppRoutes.HISTORY]: '/history',
   [AppRoutes.TEAM]: '/team',
 
@@ -32,17 +32,13 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     path: RoutePath.main,
     element: <MainPage />,
   },
-  [AppRoutes.ABOUT]: {
-    path: RoutePath.about,
-    element: <AboutPage />,
-  },
   [AppRoutes.HISTORY]: {
-    path: RoutePath.about,
-    element: <AboutPage />,
+    path: RoutePath.history,
+    element: <HistoryPage />,
   },
   [AppRoutes.TEAM]: {
-    path: RoutePath.about,
-    element: <AboutPage />,
+    path: RoutePath.team,
+    element: <TeamPage />,
   },
 
   // Must be last

@@ -1,19 +1,36 @@
 .mainPage {
-  //background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-  //url('image_1.png') no-repeat center/cover;
   position: relative;
   display: flex;
   justify-content: center;
+  height: 100vh;
+  //height: calc(100vh - var(--navbar-height));
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .mainImage {
   position: absolute;
-  //max-width: 100%;
-  //height: auto;
-  //z-index: 100;
 }
 
 .laMountains {
   position: absolute;
   z-index: 101;
+}
+
+.space {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 101;
+  opacity: .1;
+}
+
+.mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+  opacity: 0.5;
 }

@@ -9,7 +9,6 @@ const App = (): ReactElement => {
   return (
     <div className={classNames('app', {}, [])}>
       <Suspense fallback="">
-        <Navbar />
         <div className="content-page">
           <AppRouter />
         </div>

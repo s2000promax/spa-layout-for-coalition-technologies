@@ -1,0 +1,52 @@
+.historyPage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.peak {
+  object-fit: cover;
+  width: 100%;
+  margin-top: -130px;
+}
+
+.textContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 102;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  top: calc(var(--navbar-height) + 10px);
+
+  h1 {
+    font: var(--font-xxl);
+    color: var(--xxl-text-primary-color);
+    position: relative;
+
+    span {
+      position: absolute;
+      font: var(--font-xl);
+      color: var(--secondary-color);
+      text-transform: uppercase;
+      left: 120px;
+      bottom: 40px;
+    }
+  }
+
+  p {
+    margin-left: 70px;
+    color: var(--xl-text-primary-color);
+  }
+}
+
+.carousel {
+  position: absolute;
+  z-index: 102;
+}

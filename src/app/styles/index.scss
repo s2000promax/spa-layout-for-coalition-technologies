@@ -4,8 +4,13 @@
 @import './themes/dark';
 
 @font-face {
-  font-family: consolas;
-  src: url('shared/assets/fonts/Consolas.ttf');
+  font-family: PMNCaecilia;
+  src: url('shared/assets/fonts/PMNCaeciliaSansTextBd.ttf');
+}
+
+@font-face {
+  font-family: tusker;
+  src: url('shared/assets/fonts/tusker-grotesk-6600-semibold.ttf');
 }
 
 .app,
