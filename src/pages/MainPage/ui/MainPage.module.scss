@@ -1,0 +1,19 @@
+.mainPage {
+  //background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  //url('image_1.png') no-repeat center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.mainImage {
+  position: absolute;
+  //max-width: 100%;
+  //height: auto;
+  //z-index: 100;
+}
+
+.laMountains {
+  position: absolute;
+  z-index: 101;
+}

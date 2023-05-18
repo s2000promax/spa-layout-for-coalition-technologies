@@ -28,12 +28,12 @@ export function buildPlugins(
       _API_: JSON.stringify(apiUrl),
       _PROJECT_: JSON.stringify(project),
     }),
-    new CopyPlugin({
+    /* new CopyPlugin({
       patterns: [
-        { from: paths.locales, to: paths.buildLocales },
-        { from: paths.assets, to: paths.buildAssets },
+        // { from: paths.assets, to: paths.buildAssets },
       ],
-    }),
+    }
+),*/
   ];
 
   if (isDev) {

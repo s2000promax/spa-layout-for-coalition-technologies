@@ -1,4 +1,4 @@
-import React, { memo} from 'react';
+import React, { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, VariantButton } from '@/shared/uiKit/Button';
 import cls from './Navbar.module.scss';
@@ -13,19 +13,13 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   return (
     <div className={classNames(cls.navbar, {}, [className])}>
       <div className={classNames(cls.links, {}, [className])}>
-        <AppLink theme={AppLinkTheme.SECONDARY} to={'/'}>
+        <AppLink theme={AppLinkTheme.SECONDARY} to={'/about'}>
           <span>{'History'}</span>
         </AppLink>
         <AppLink theme={AppLinkTheme.SECONDARY} to={'/about'}>
           <span>{'Team'}</span>
         </AppLink>
       </div>
-      <Button
-        variant={VariantButton.CLEAR_INVERTED}
-        onClick={toggleTheme}
-      >
-        {/*<ThemeToggle />*/}
-      </Button>
     </div>
   )
     ;
