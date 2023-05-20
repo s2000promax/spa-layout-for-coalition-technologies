@@ -16,7 +16,8 @@
   --font-xxl: var(--font-size-xxl) / var(--font-line-xxl) var(--font-family-xxl);
 
   // Dimensions
-  --navbar-height: 74px;
+  --navbar-height: 75px;
+  --footer-height: 75px;
 
   // Z-index
   --modal-z-index: 10;
@@ -25,4 +26,10 @@
   --overlay-color: rgba(0 0 0 / 60%);
   --red-light: #f00;
   --red-dark: #ce0505;
+
+  //Functions
+  $assetPath : "/assets";
+  @function get-path-to-assets($assetPath){
+    @return $assetPath;
+  }
 }

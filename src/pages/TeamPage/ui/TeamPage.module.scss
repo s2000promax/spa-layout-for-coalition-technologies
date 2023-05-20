@@ -1,3 +1,62 @@
 .teamPage {
+  height: calc(100vh - var(--footer-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.headerContainer {
+  max-width: 960px;
+  display: flex;
+
+  h1 {
+    font: var(--font-xxl);
+    color: var(--xxl-text-primary-color);
+    position: relative;
+
+    span {
+      position: absolute;
+      font: var(--font-xl);
+      color: var(--secondary-color);
+      text-transform: uppercase;
+      left: 120px;
+      bottom: 40px;
+    }
+  }
+
+  p {
+    margin-left: 170px;
+    color: var(--xl-text-primary-color);
+  }
+}
+
+.navTab {
+  background: var(--secondary-color);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+
+  .tabContainer {
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.tabBlock {
+  width: 100%;
+  height: 100vh;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .contentContainer {
+    max-width: 960px;
+    width: 100%;
+    position: relative;
+  }
 }

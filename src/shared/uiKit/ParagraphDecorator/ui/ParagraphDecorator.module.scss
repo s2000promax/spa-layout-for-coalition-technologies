@@ -1,0 +1,35 @@
+.paragraphDecorator {
+  max-width: 960px;
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.column {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  h1 {
+    font: var(--font-xxl);
+    color: var(--xxl-text-primary-color);
+    position: relative;
+  }
+
+  span {
+    margin-left: -35px;
+    font: var(--font-xl);
+    color: var(--secondary-color);
+    text-transform: uppercase;
+  }
+}
+
+.textContainer {
+  margin-left: 30px;
+}

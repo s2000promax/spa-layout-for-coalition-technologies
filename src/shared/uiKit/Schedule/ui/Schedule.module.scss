@@ -1,0 +1,25 @@
+.schedule {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  width: 350px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+  h1 {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    margin-bottom: 10px;
+    color: var(--xl-text-primary-color);
+  }
+}

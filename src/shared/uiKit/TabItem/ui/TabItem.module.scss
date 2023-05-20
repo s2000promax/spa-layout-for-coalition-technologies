@@ -1,0 +1,30 @@
+.tabItem {
+  min-width: 140px;
+  position: relative;
+  z-index: 111;
+  margin-right: 50px;
+}
+
+.rectangle {
+  position: absolute;
+  top: -15px;
+  left: -18px;
+  width: 140px;
+  height: 62px;
+
+  z-index: -1;
+
+}
+
+.active {
+  background: var(--fourth-color);
+
+  .underline {
+    position: absolute;
+    top: 38px;
+    left: 18px;
+    width: 100px;
+    height: 2px;
+    background: var(--secondary-color);
+  }
+}

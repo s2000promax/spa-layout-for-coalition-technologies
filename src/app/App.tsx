@@ -3,6 +3,7 @@ import './styles/index.scss';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppRouter } from '@/app/providers/router';
 import { Navbar } from '@/widgets/Navbar';
+import { Footer } from '@/widgets/Footer';
 
 const App = (): ReactElement => {
 
@@ -12,6 +13,7 @@ const App = (): ReactElement => {
         <div className="content-page">
           <AppRouter />
         </div>
+        <Footer />
       </Suspense>
     </div>
   );

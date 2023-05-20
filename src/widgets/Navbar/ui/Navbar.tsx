@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Navbar.module.scss';
 import { AppLink, AppLinkTheme } from '@/shared/uiKit/AppLink';
-import logo from '../../../../public/assets/logo.png';
+import logo from '@/shared/assets/ui/logo.png';
 
 export enum VariantNavbar {
   CLEAR = 'clear',
@@ -24,7 +24,6 @@ export const Navbar = memo((props: NavbarProps) => {
     [cls[variant]]: true,
   };
 
-  console.log(mods);
   return (
     <div
       className={classNames(cls.navbar, mods, [className])}
@@ -36,22 +35,24 @@ export const Navbar = memo((props: NavbarProps) => {
           {},
           [className])}
       >
-        <div
+        <AppLink theme={AppLinkTheme.SECONDARY} to={'/'}>
+          <div
           className={classNames(cls.logo, {}, [className])}
         >
-          <img
+            <img
         src={logo}
         alt="logo"
       />
-          <div
+            <div
             className={classNames(cls.logoContainer, {}, [className])}
             style={{
             display: `${variant === VariantNavbar.BACKGROUND ? 'flex' : 'none'}`,
           }}>
-            <span>LosAngeles</span>
-            <span>Mountains</span>
+              <span>LosAngeles</span>
+              <span>Mountains</span>
+            </div>
           </div>
-        </div>
+        </AppLink>
         <div className={classNames(cls.links, {}, [className])}>
           <AppLink theme={AppLinkTheme.SECONDARY} to={'/history'}>
             <span>{'01. History'}</span>
