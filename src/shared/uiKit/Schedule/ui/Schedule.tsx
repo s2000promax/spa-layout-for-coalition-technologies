@@ -25,8 +25,10 @@ export const Schedule = memo((props: ScheduleProps) => {
         {
           schedules.map((item, index) => (
             <li key={`${item}-${index}`}>
-              <span>{item.data ? item.data : <br/>}</span>
-              <span>{item.description}</span>
+              <div>
+                <span>{item.data ? item.data : <br/>}</span>
+                <span>{item.description}</span>
+              </div>
             </li>
           ))
         }
