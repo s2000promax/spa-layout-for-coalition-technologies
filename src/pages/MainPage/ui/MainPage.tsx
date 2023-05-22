@@ -1,4 +1,4 @@
-import { type ReactElement, useEffect, useState } from 'react';
+import { type ReactElement, useEffect, useRef, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './MainPage.module.scss';
 import MainImage from '@/shared/assets/ui/image_1.png';
@@ -10,24 +10,29 @@ import { VariantNavbar } from '@/widgets/Navbar/ui/Navbar';
 
 const MainPage = (): ReactElement => {
   const [offSetX, setOffSetX] = useState<number>(0);
+  const mainImageRef = useRef<any>();
+  const laImageRef = useRef<any>();
 
-  const { windowWidth } = useBrowserWindowSize();
+  const { screenWidth } = useBrowserWindowSize();
 
   useEffect(() => {
-    setOffSetX(windowWidth / 2);
-  }, [windowWidth]);
+    setOffSetX(screenWidth / 2);
+    console.log(screenWidth);
+  }, [screenWidth]);
 
   return (
     <>
       <Navbar variant={VariantNavbar.CLEAR}/>
-      <div className={classNames(cls.mainPage)}>
+      <div
+        className={classNames(cls.mainPage)}
+      >
         <img
+          ref={mainImageRef}
           src={MainImage}
           alt="Mountains"
           className={cls.mainImage}
           style={{
-            top: `${-9}px`,
-            left: `${offSetX - (2533 / 2) - 300}px`,
+            left: `${screenWidth > 600 ? (offSetX - (2533 / 2) - 295) : (offSetX - (2533 / 2) - 420)}px`,
           }}
         />
         <img
@@ -35,8 +40,9 @@ const MainPage = (): ReactElement => {
           alt="LosAngeles Mountains"
           className={cls.laMountains}
           style={{
-            top: `${241}px`,
-            left: `${offSetX - 396}px`,
+            top: `${screenWidth > 600 ? 250 : 350}px`,
+            left: `${screenWidth > 600 ? (offSetX - 390) : (offSetX - 35)}px`,
+            scale: `${screenWidth > 600 ? 1 : 1.4}`,
           }}
         />
         <img
@@ -44,10 +50,8 @@ const MainPage = (): ReactElement => {
           alt="space"
           className={cls.space}
         />
-        <div
-          className={cls.mask}
-        />
       </div>
+      <div className={cls.mask} />
     </>
   );
 };

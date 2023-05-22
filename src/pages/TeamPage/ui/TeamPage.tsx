@@ -5,9 +5,9 @@ import tab1 from '@/shared/assets/ui/tab1.png';
 import tab2 from '@/shared/assets/ui/tab2.png';
 import { TabItem } from '@/shared/uiKit/TabItem';
 import { Schedule } from '@/shared/uiKit/Schedule';
-import { schedulesTab1,schedulesTab2 } from '@/shared/data/data';
+import { schedulesTab1,schedulesTab2 } from '@/shared/data/mockData';
 import { ParagraphDecorator } from '@/shared/uiKit/ParagraphDecorator';
-import { climbContent } from '@/shared/data/data';
+import { climbContent } from '@/shared/data/mockData';
 
 enum Tabs {
   TAB1 = 'tab1',
@@ -61,7 +61,11 @@ export const TeamPage = (props: TeamPageProps) => {
               <div
                 className={classNames(cls.contentContainer, {}, [className])}
               >
-                <Schedule schedules={schedulesTab1}/>
+                <div className={classNames(cls.schedule, {}, [className])}>
+                  <Schedule
+                  schedules={schedulesTab1}
+                />
+                </div>
               </div>
             </div>
           )
@@ -76,7 +80,11 @@ export const TeamPage = (props: TeamPageProps) => {
               <div
                 className={classNames(cls.contentContainer, {}, [className])}
               >
-                <Schedule schedules={schedulesTab2}/>
+                <div className={classNames(cls.schedule, {}, [className])}>
+                  <Schedule
+                    schedules={schedulesTab2}
+                  />
+                </div>
               </div>
             </div>
           )

@@ -1,21 +1,22 @@
 import { useEffect, useState } from 'react';
 
-type WindowSize = {
-  windowWidth: number;
-  windowHeight: number;
+type ScreenSize = {
+  screenWidth: number;
+  screenHeight: number;
 }
 
 export const useBrowserWindowSize = () => {
-  const [windowSize, setWindowSize] = useState<WindowSize>({
-    windowWidth: window.innerWidth,
-    windowHeight: window.innerHeight,
+  const [windowSize, setWindowSize] = useState<ScreenSize>({
+    // windowWidth: window.innerWidth,
+    screenWidth: screen.width,
+    screenHeight: screen.height,
   });
 
   useEffect(() => {
     const handleResize = () => {
       setWindowSize({
-        windowWidth: window.innerWidth,
-        windowHeight: window.innerHeight,
+        screenWidth: screen.width,
+        screenHeight: screen.height,
       });
     };
 

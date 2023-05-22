@@ -1,4 +1,6 @@
-import { ScheduleItem } from '@/shared/types/types';
+import { CarouselPhotos, ScheduleItem } from '@/shared/types/types';
+import photo1 from '@/shared/assets/ui/carousel/photo1.png';
+import photo2 from '@/shared/assets/ui/carousel/photo2.png';
 
 export const schedulesTab1: Array<ScheduleItem> = [
   { data: '25 Nov 2016', description: 'Vestibulum viverra' },
@@ -33,3 +35,10 @@ export const climbContent = `
           iusto mollitia nostrum pariatur praesentium quibusdam reiciendis similique tenetur
           ullam veniam!
 `;
+
+export const carouselPhotos: Array<CarouselPhotos> = [
+  { id: '0', src: photo1, alt: 'photo1' },
+  { id: '1', src: photo2, alt: 'photo2' },
+  { id: '2', src: photo1, alt: 'photo3' },
+  { id: '3', src: photo2, alt: 'photo4' },
+];

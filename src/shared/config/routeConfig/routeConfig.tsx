@@ -1,7 +1,6 @@
 import React from 'react';
 import { type RouteProps } from 'react-router-dom';
 import { MainPage } from '@/pages/MainPage';
-import { AboutPage } from '@/pages/AboutPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
 import { HistoryPage } from '@/pages/HistoryPage';
 import { TeamPage } from '@/pages/TeamPage';
