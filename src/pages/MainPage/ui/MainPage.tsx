@@ -10,24 +10,30 @@ import { VariantNavbar } from '@/widgets/Navbar/ui/Navbar';
 
 const MainPage = (): ReactElement => {
   const [offSetX, setOffSetX] = useState<number>(0);
-  const mainImageRef = useRef<any>();
-  const laImageRef = useRef<any>();
-
-  const { screenWidth } = useBrowserWindowSize();
+  const { screenWidth, screenHeight } = useBrowserWindowSize();
+  const mainDivRef = useRef<any>();
 
   useEffect(() => {
     setOffSetX(screenWidth / 2);
-    console.log(screenWidth);
-  }, [screenWidth]);
+
+    if (mainDivRef.current) {
+      if (screenHeight < 500) {
+        mainDivRef.current.scrollTop = 150;
+      }
+    }
+  }, [screenHeight, screenWidth]);
 
   return (
     <>
       <Navbar variant={VariantNavbar.CLEAR}/>
       <div
         className={classNames(cls.mainPage)}
+        ref={mainDivRef}
+        style={{
+          overflowY: `${screenHeight < 500 ? 'auto' : 'hidden'}`,
+        }}
       >
         <img
-          ref={mainImageRef}
           src={MainImage}
           alt="Mountains"
           className={cls.mainImage}
