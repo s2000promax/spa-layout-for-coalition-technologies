@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/s2000promax/fortunes-island.git"
+    "url": "git+https://github.com/s2000promax/spa-layout-for-coalition-technologies.git"
   },
   "keywords": [],
   "author": "Stan <s2000promax@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/s2000promax/fortunes-island/issues"
+    "url": "https://github.com/s2000promax/spa-layout-for-coalition-technologies/issues"
   },
-  "homepage": "https://github.com/s2000promax/fortunes-island#readme",
+  "homepage": "https://github.com/s2000promax/spa-layout-for-coalition-technologies#readme",
   "devDependencies": {
     "@babel/core": "^7.21.3",
     "@babel/preset-react": "^7.18.6",
