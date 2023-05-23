@@ -4,17 +4,36 @@
   z-index: 111;
   margin-left: 30px;
   margin-right: 20px;
+
+  .rectangle {
+    position: absolute;
+    top: -15px;
+    left: -18px;
+    width: 140px;
+    height: 62px;
+    z-index: -1;
+  }
 }
 
-.rectangle {
-  position: absolute;
-  top: -15px;
-  left: -18px;
-  width: 140px;
+.tabMobileItem {
   height: 62px;
+  position: relative;
+  z-index: 111;
+  display: flex;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  overflow: hidden;
 
-  z-index: -1;
 
+  .mobileRectangle {
+    position: absolute;
+    top: -15px;
+    left: -18px;
+    width: 140px;
+    height: 62px;
+    z-index: -1;
+  }
 }
 
 .active {

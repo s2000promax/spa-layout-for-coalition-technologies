@@ -36,7 +36,7 @@
 }
 
 .background {
-  background: var(--bg-color);
+  background: var(--fourth-color);
   color: var(--primary-color);
   border: none;
 }
@@ -49,6 +49,11 @@
 
 .square {
   padding: 0;
+}
+
+.size_full {
+  width: 100%;
+  height: var(--font-line-xl);
 }
 
 .square.size_m {

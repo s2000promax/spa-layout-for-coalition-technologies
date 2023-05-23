@@ -17,6 +17,7 @@ export enum SizeButton {
   M = 'size_m',
   L = 'size_l',
   XL = 'size_xl',
+  F = 'size_full',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

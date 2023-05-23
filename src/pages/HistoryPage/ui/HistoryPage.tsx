@@ -5,7 +5,7 @@ import peak from '@/shared/assets/ui/peak.png';
 import { Navbar } from '@/widgets/Navbar';
 import { ParagraphDecorator, VariantParagraphDecorator } from '@/shared/uiKit/ParagraphDecorator';
 import { historyContent } from '@/shared/data/mockData';
-import { Carousel } from '@/widgets/Carousel';
+import { Carousel } from '@/features/Carousel';
 import { carouselPhotos } from '@/shared/data/mockData';
 
 interface HistoryPageProps {

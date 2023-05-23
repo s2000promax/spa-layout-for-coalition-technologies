@@ -1,6 +1,6 @@
 :root {
   // Fonts
-  --font-family-main: PMNCaecilia, "Times New Roman", serif;
+  --font-family-main: pmncaecilia, "Times New Roman", serif;
   --font-family-xxl: tusker, "Times New Roman", serif;
   --font-size-m: 16px;
   --font-line-m: 24px;
@@ -28,7 +28,8 @@
   --red-dark: #ce0505;
 
   //Functions
-  $assetPath : "/assets";
+  $assetPath: "/assets";
+
   @function get-path-to-assets($assetPath){
     @return $assetPath;
   }

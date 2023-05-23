@@ -15,7 +15,7 @@ export const Carousel = memo((props: CarouselProps) => {
     photos = [],
   } = props;
 
-  const [selectedId, setSelectedId] = useState<string>('1');
+  const [selectedId, setSelectedId] = useState<string>('0');
 
   const handleClick = useCallback((event: React.MouseEvent<HTMLDivElement>) => {
     setSelectedId(event.currentTarget.id);
